@@ -424,14 +424,44 @@ var nomes = [
   "Yara Guasque",
   "Zach Barney",
   "Zé Kielwagen",
-  "Zenilda Cardoso"
+  "Zenilda Cardoso",
+  "Shortcup",
+  "Vinz",
+  "Hencke",
+  "Fabio Ape",
+  "Eduardo Abraham",
+  "Murilo",
+  "Ruan Fracik",
+  "Doriva Roze",
+  "Rafael Teixeira",
+  "Edo",
+  "Caetano",
+  "Guto",
+  "ORDEEP",
+  "Marie Painní",
+  "Milidiu",
+  "Quest",
+  "Henrique Vieceli",
+  "Bruna Moura",
+  "Daniel Dumach",
+  "Evan Baggs",
+  "Jean Mafra",
+  "Konnin",
+  "Kosmo",
+  "Pesco",
+  "Markus Sommer",
+  "Fred P",
+  "Daniel Bell",
+  "Diogo de Haro",
+  "Rafael Augusto",
+  "Serigio Bello"
 ];
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
   // alignSlider = createSlider(0, 2, 1.5, 0.1);
   // cohesionSlider = createSlider(0, 2, 1, 0.1);
-  // separationSlider = createSlider(0, 2, 2, 0.1);
+  separationSlider = createSlider(0, 2, 2, 0.1);
   for (let i = 0; i < nomes.length; i++) {
     flock.push(new Boid(nomes[i]));
   }
@@ -441,7 +471,7 @@ function draw() {
   background(0);
   textFont("Montserrat");
   textSize(18);
-  fill("rgba(255, 255, 255, 1)");
+  fill(255, 255, 255);
   // opacity(0.5);
   for (let boid of flock) {
     boid.edges();

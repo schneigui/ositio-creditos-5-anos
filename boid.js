@@ -4,7 +4,7 @@ class Boid {
     this.velocity = p5.Vector.random2D();
     this.velocity.setMag(random(2, 4));
     this.acceleration = createVector();
-    this.maxForce = 0.0;
+    this.maxForce = 0.3;
     this.maxSpeed = 0.4;
     this.nome = _nome;
     this.r = random(255);
@@ -110,7 +110,7 @@ class Boid {
 
     // alignment.mult(alignSlider.value());
     // cohesion.mult(cohesionSlider.value());
-    // separation.mult(separationSlider.value());
+    separation.mult(separationSlider.value());
 
     this.acceleration.add(alignment);
     this.acceleration.add(cohesion);
